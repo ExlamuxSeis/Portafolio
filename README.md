@@ -2,9 +2,9 @@
 
 # 🌐 Portafolio Web – Exlamux6
 
-### 💻 Desarrollador Web Frontend | UI Enthusiast
+### 💻 Desarrollador Web Frontend | Vue.js | Bootstrap | UI Designer
 
-Portafolio profesional diseñado para mostrar mis habilidades, proyectos y experiencia en desarrollo web moderno.
+Portafolio profesional desarrollado para mostrar mis habilidades, proyectos y experiencia en desarrollo web moderno utilizando tecnologías actuales como Vue.js y Bootstrap.
 
 <br>
 
@@ -15,6 +15,8 @@ Portafolio profesional diseñado para mostrar mis habilidades, proyectos y exper
 ![HTML](https://img.shields.io/badge/HTML-5-orange?style=for-the-badge&logo=html5)
 ![CSS](https://img.shields.io/badge/CSS-3-blue?style=for-the-badge&logo=css3)
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript)
+![Vue.js](https://img.shields.io/badge/Vue.js-Framework-42b883?style=for-the-badge&logo=vue.js)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5-7952b3?style=for-the-badge&logo=bootstrap)
 ![Responsive](https://img.shields.io/badge/Design-Responsive-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Activo-success?style=for-the-badge)
 
@@ -24,19 +26,20 @@ Portafolio profesional diseñado para mostrar mis habilidades, proyectos y exper
 
 ## ✨ Sobre este proyecto
 
-Este proyecto es mi portafolio web personal, creado con el objetivo de presentar mi perfil profesional, habilidades y proyectos a reclutadores y empresas.
+Este repositorio contiene el código fuente de mi portafolio web personal, diseñado para presentar mi perfil profesional, habilidades técnicas y proyectos a reclutadores y empresas.
 
-Está diseñado con una interfaz moderna, limpia y completamente responsive, aplicando buenas prácticas de desarrollo frontend.
+El sitio fue desarrollado utilizando Vue.js para la interactividad y Bootstrap 5 para el diseño responsive, logrando una interfaz moderna, limpia y profesional.
 
 ---
 
 ## 🚀 Características principales
 
 ✔ Diseño moderno y profesional  
-✔ Interfaz responsive (PC, tablet y móvil)  
+✔ Interfaz completamente responsive  
+✔ Desarrollo basado en componentes con Vue.js  
+✔ Diseño adaptable usando Bootstrap 5  
 ✔ Código limpio y organizado  
-✔ Estructura escalable  
-✔ Navegación fluida  
+✔ Navegación dinámica  
 ✔ Optimizado para presentación profesional  
 
 ---
@@ -46,9 +49,11 @@ Está diseñado con una interfaz moderna, limpia y completamente responsive, apl
 | Tecnología | Uso |
 |-----------|-----|
 | HTML5 | Estructura del sitio |
-| CSS3 | Diseño y estilos |
-| JavaScript | Interactividad |
-| Responsive Design | Adaptación a dispositivos |
+| CSS3 | Estilos personalizados |
+| JavaScript | Lógica e interactividad |
+| Vue.js | Reactividad e interfaz dinámica |
+| Bootstrap 5 | Diseño responsive y layout |
+| Responsive Design | Adaptación a todos los dispositivos |
 
 ---
 
@@ -71,19 +76,20 @@ Portafolio/
 
 ---
 
-## 💻 Lo que demuestra este proyecto
+## 💻 Habilidades demostradas
 
-Este portafolio demuestra mis habilidades en:
+Este proyecto demuestra experiencia en:
 
-- Desarrollo frontend
-- Diseño web responsive
+- Desarrollo frontend moderno
+- Vue.js (reactividad y estructura)
+- Bootstrap 5 (layout responsive)
+- JavaScript
+- Diseño UI moderno
 - Organización profesional de proyectos
-- JavaScript básico e interactividad
-- Maquetación moderna
 
 ---
 
-## ⚙️ Cómo usar el proyecto
+## ⚙️ Cómo ejecutar el proyecto
 
 ### 1. Clonar repositorio
 
