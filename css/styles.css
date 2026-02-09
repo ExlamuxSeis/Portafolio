@@ -1,0 +1,328 @@
+/* =========================
+    VARIABLES BASE
+========================= */
+:root {
+        /* colores modo oscuro */
+    --bg-main: #121212;
+    --bg-card: #1e1e1e;
+    --text-main: #f5f5f5;
+    --text-muted: #eeeaea;
+    --accent: #f28b82;
+    --border: #2f2f2f;
+
+    /* transición global */
+    --transition: all 0.3s ease;
+}
+
+/* =========================
+    VARIABLES LIGHT MODE
+========================= */
+body.light {
+    --bg-main: #f7f7f8;
+    --bg-card: #ffffff;
+    --text-main: #1a1a1a;
+    --text-muted: #7e7474;
+    --accent: #e85d5d;
+    --border: #ddd;
+}
+
+/* =========================
+    RESET GENERAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+    BODY
+========================= */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-main);
+    color: var(--text-main);
+    transition: var(--transition);
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* =========================
+    LINKS
+========================= */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+    BACKGROUND GLOBAL
+========================= */
+.background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(242, 139, 130, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(242, 139, 130, 0.08), transparent 45%),
+        linear-gradient(180deg, #0f0f0f, #151515);
+}
+
+/* =========================
+    BACKGROUND LIGHT
+========================= */
+body.light .background {
+    background:
+        radial-gradient(circle at 20% 20%, rgba(232, 93, 93, 0.15), transparent 40%),
+        radial-gradient(circle at 80% 30%, rgba(232, 93, 93, 0.08), transparent 45%),
+        linear-gradient(180deg, #ffffff, #f3f3f3);
+}
+
+/* =========================
+    SHAPES DECORATIVOS
+========================= */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.6;
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 {
+    width: 320px;
+    height: 320px;
+    background: #1f0442;
+    top: 10%;
+    left: 5%;
+}
+
+.shape-2 {
+    width: 420px;
+    height: 420px;
+    background: #1f0442;
+    top: 50%;
+    right: 10%;
+    animation-delay: -6s;
+}
+
+.shape-3 {
+    width: 260px;
+    height: 260px;
+    background: #1f0442;
+    bottom: 10%;
+    left: 40%;
+    animation-delay: -12s;
+}
+
+/* =========================
+    SHAPES LIGHT
+========================= */
+body.light .shape {
+    opacity: 0.35;
+    filter: blur(90px);
+}
+
+/* =========================
+    ANIMACIÓN SHAPES
+========================= */
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -40px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* =========================
+    NAVBAR
+========================= */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+}
+
+.nav nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* =========================
+    TOGGLE TEMA
+========================= */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* =========================
+    HERO
+========================= */
+.hero {
+    padding: 5rem 3rem;
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+}
+
+.hero h2 {
+    color: var(--accent);
+    margin: 0.5rem 0;
+}
+
+.hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+}
+
+/* =========================
+    BOTONES
+========================= */
+.actions {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.btn.primary {
+    background: var(--accent);
+    border: none;
+    color: #fff;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.ligth.btn{
+    color: #0f0f0f;
+}
+
+/* =========================
+    SECCIONES
+========================= */
+.section {
+    padding: 4rem 3rem;
+    max-width: 1100px;
+}
+
+.section-desc {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin-bottom: 2rem;
+}
+
+/* =========================
+    GRID
+========================= */
+.grid,
+.blogui-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+/* =========================
+    CARDS
+========================= */
+.card {
+    background: var(--bg-card);
+    padding: 1.2rem;
+    border-radius: 14px;
+    transition: var(--transition);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+body.light .card {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================
+    IMÁGENES
+========================= */
+.img-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+/* =========================
+    MODAL
+========================= */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 14px;
+    max-width: 600px;
+    width: 90%;
+}
+
+.modal-content img {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    float: right;
+}
+
+/* =========================
+    FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+/* =========================
+    ANIMACIONES SCROLL
+========================= */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.6s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Manuel León</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="container">
+    <div class="background">
+        <span class="shape shape-1"></span>
+        <span class="shape shape-2"></span>
+        <span class="shape shape-3"></span>
+    </div>
+    <div id="app">
+        <!-- NAV -->
+        <header class="nav">
+            <div class="logo">Exlamux6</div>
+            <nav>
+                <a href="#about">Sobre mí</a>
+                <a href="#skills">Skills</a>
+                <a href="#blogui">Blogui</a>
+                <a href="#contact">Contacto</a>
+                <button class="theme-toggle" @click="toggleTheme">
+                    {{ theme === 'dark' ? '☀️' : '🌙' }}
+                </button>
+            </nav>
+        </header>
+
+        <!-- HERO -->
+        <section class="hero fade-up">
+            <h1>Víctor Manuel Urquidez León</h1>
+            <h2>Web Designer & Front-End Developer</h2>
+            <p>
+                Diseño interfaces limpias y funcionales usando Vue.js, HTML, CSS, Bootstrap y
+                principios sólidos de UI/UX.
+            </p>
+
+            <div class="actions">
+                <a href="#blogui" class="btn primary">Ver diseños</a>
+                <a href="https://github.com/exlamuxseis" target="_blank" class="btn parpadeo primary">GitHub</a>
+                <a href="https://linkedin.com/in/exlamux6" target="_blank" class="btn parpadeo primary">LinkedIn</a>
+            </div>
+        </section>
+
+        <!-- SOBRE MI -->
+        <section id="about" class="section fade-up">
+            <h3>Sobre mí</h3>
+            <p>
+                Desarrollador Front-End especializado en Vue.js, JavaScript, HTML y CSS. Enfocado en crear interfaces modernas, responsivas y centradas en la experiencia del usuario, con experiencia en diseño UI/UX y desarrollo de aplicaciones web funcionales.
+            </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section fade-up">
+            <h3>Skills</h3>
+
+            <div class="grid">
+                <div class="card">HTML5</div>
+                <div class="card">CSS3</div>
+                <div class="card">JavaScript</div>
+                <div class="card">Vue.js</div>
+                <div class="card">Figma</div>
+                <div class="card">Git / GitHub</div>
+                <div class="card">Bootstrap</div>
+                <div class="card">PHP / MySQL</div>
+                <div class="card">Bitbucket</div>
+                <div class="card">Jira / Trello</div>
+                <div class="card">Slack</div>
+                <div class="card">Bitbucket / Sourcetree</div>
+            </div>
+        </section>
+
+        <!-- BLOGUI (TODO JUNTO) -->
+        <section id="blogui" class="section fade-up">
+            <h3>Blogui · UI Design</h3>
+            <p class="section-desc">
+                Diseño completo de interfaz para plataforma de blogs: dashboard
+                administrativo, gestión de usuarios y adaptación mobile, enfocado en
+                claridad, jerarquía visual y experiencia en dark mode.
+            </p>
+
+            <div class="blogui-grid">
+                <div class="card img-card" v-for="item in blogui" :key="item.title" @click="openModal(item)">
+                    <img :src="item.image" :alt="item.title" />
+                    <span>{{ item.title }}</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODAL -->
+        <div class="modal" v-if="activeDesign" @click.self="activeDesign = null">
+            <div class="modal-content">
+                <button class="close" @click="activeDesign = null">✕</button>
+                <h4>{{ activeDesign.title }}</h4>
+                <img :src="activeDesign.image" :alt="activeDesign.title" />
+                <p>{{ activeDesign.description }}</p>
+                <a :href="activeDesign.figma" target="_blank" class="btn primary">Ver en Figma</a>
+            </div>
+        </div>
+
+        <!-- CONTACTO -->
+        <section id="contact" class="section fade-up">
+            <h3>Contacto</h3>
+            <p>¿Hablamos de diseño y desarrollo web?</p>
+            <p><strong>Email:</strong> exlamux6@outlook.com</p>
+        </section>
+
+        <footer>
+            Designed in Figma · Built with HTML, CSS, JavaScript & Vue.js
+        </footer>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
