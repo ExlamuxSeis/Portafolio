@@ -20,7 +20,7 @@ createApp({
                 },
                 {
                     title: 'Configuración y Bloqueos',
-                    image: 'assets/img/lista de bloqueo.webp',
+                    image: 'assets/img/Lista de bloqueo.webp',
                     description: 'Aquí el enfoque era tener una sección para ver que usuarios tenía bloqueados y la opción para desbloquearlos',
                     figma: 'https://www.figma.com/design/xdRR2TzpdHs4FKxbobLAab/Dulfin-Lubricantes?node-id=0-1&p=f&t=gD8299HfZwRhMJ2Z-0'
                 },
